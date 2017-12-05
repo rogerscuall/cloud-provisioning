@@ -8,6 +8,7 @@ for i in 1 2 3; do
     docker-machine create \
         -d virtualbox \
         --virtualbox-memory 512 \
+        --virtualbox-hostonly-cidr "10.10.10.1/24" \
         swarm-test-$i
 done
 

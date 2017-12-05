@@ -7,6 +7,7 @@ fi
 for i in {1..5}; do
     docker-machine create \
         -d virtualbox \
+        --virtualbox-hostonly-cidr "10.10.10.1/24" \
         swarm-$i
 done
 
